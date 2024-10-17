@@ -86,6 +86,9 @@ def make_arg_parser(parser: FlexibleArgumentParser) -> FlexibleArgumentParser:
         default="info",
         choices=['debug', 'info', 'warning', 'error', 'critical', 'trace'],
         help="log level for uvicorn")
+    parser.add_argument("--disable-cors",
+                       action="store_true",
+                       help="whether to disable cors middleware")
     parser.add_argument("--allow-credentials",
                         action="store_true",
                         help="allow credentials")
